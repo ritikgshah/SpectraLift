@@ -7,7 +7,7 @@ Welcome to the official implementation of SpectraLift. This repository accompani
 - CSV files with metrics
   Contains subfolders for each synthetic hyperspectral image (HSI): Botswana, Kennedy Space Center, Pavia Center, Pavia University, and Washington DC Mall.
   Each subfolder includes CSV files listing image quality metrics for multiple experimental settings—e.g., different PSFs, downsampling ratios for low-resolution HSI, and varying numbers of bands in high-resolution MSI.
-  Additionally, the root folder includes an Excel file titled All SOTA methods comparison for all experiments, which aggregates all individual metrics and comparison tables. These results reflect all synthetic experiment data reported in our paper.
+  Additionally, the folder includes an Excel file titled All SOTA methods comparison for all experiments, which aggregates all individual metrics and comparison tables. These results reflect all synthetic experiment data reported in our paper. This Excel file has a sheet named 'Individual metrics analysis' within which users can see the number of times each method achieves the best metric value for each dataset (towards the bottom of this sheet you can find the % times each method achieves the best metric), allowing users to compare in which cases each method does best and worst. 
 - Comparison Implementation
   Contains two subfolders:  
   • Supervised — Includes pre-executed Jupyter notebooks for FeINFN, FusFormer, GuidedNet, and MIMO-SST, applied to both     synthetic datasets and University of Houston data.  
