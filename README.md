@@ -10,12 +10,9 @@ Welcome to the official implementation of SpectraLift. This repository accompani
   Additionally, the root folder includes an Excel file titled All SOTA methods comparison for all experiments, which aggregates all individual metrics and comparison tables. These results reflect all synthetic experiment data reported in our paper.
 - Comparison Implementation
   Contains two subfolders:  
-
-• Supervised — Includes pre-executed Jupyter notebooks for FeINFN, FusFormer, GuidedNet, and MIMO-SST, applied to both     synthetic datasets and University of Houston data.  
-
-• Unsupervised — Includes pre-executed notebooks for MIAE, C2FF, SSSR, and SDP.
-These implementations enable benchmarking against state-of-the-art supervised and unsupervised models.  
-
+  • Supervised — Includes pre-executed Jupyter notebooks for FeINFN, FusFormer, GuidedNet, and MIMO-SST, applied to both     synthetic datasets and University of Houston data.  
+  • Unsupervised — Includes pre-executed notebooks for MIAE, C2FF, SSSR, and SDP.
+  These implementations enable benchmarking against state-of-the-art supervised and unsupervised models.  
 - Conda Environment Replication Files
   Includes environment setup resources to help users recreate the library environment:  
 • requirements.txt — Use this to install dependencies via pip: pip install -r requirements.txt  
