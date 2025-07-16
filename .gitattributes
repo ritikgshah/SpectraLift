@@ -2,3 +2,4 @@ Spectralift_Implementation_Jupyter_Notebooks/*.ipynb filter=lfs diff=lfs merge=l
 Spectralift_Ablation_Study_Jupyter_Notebooks/*.ipynb filter=lfs diff=lfs merge=lfs -text
 Comparison_Implementations/*.ipynb filter=lfs diff=lfs merge=lfs -text
 Super_Resolved_Images_Comparison_Jupyter_Notebooks/*.ipynb filter=lfs diff=lfs merge=lfs -text
+Datasets/*.mat filter=lfs diff=lfs merge=lfs -text
