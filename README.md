@@ -1,7 +1,7 @@
 # SpectraLift: Physics-Guided Spectral-Inversion Network for Hyperspectral Image Super-Resolution
 Authors: Ritik Shah, Marco Duarte
 
-The paper can be accessed at this link: https://arxiv.org/pdf/2507.13339
+The extended version of the paper can be accessed at this link: https://arxiv.org/pdf/2507.13339
 
 Welcome to the official implementation of SpectraLift. This repository accompanies our research paper and includes code, notebooks, data outputs, and environment files used for experimentation and analysis.
 
