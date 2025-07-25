@@ -37,12 +37,14 @@ To ensure reproducibility:
 - Environment files are provided to recreate the exact setup for running or modifying any notebook.
 
 ## Citation: if you use this code or build upon our work, please cite our paper:
-  @misc{spectralift2025,  
-  author       = {Ritik Shah and Marco Duarte},  
-  title        = {SpectraLift: Physics-Guided Spectral-Inversion Network for Hyperspectral Image Super-Resolution},  
-  journal      = preprint,  
-  year         = {2025},  
-  url          = {https://github.com/ritikgshah/SpectraLift}  
+@misc{shah2025spectraliftphysicsguidedspectralinversionnetwork,
+      title={SpectraLift: Physics-Guided Spectral-Inversion Network for Self-Supervised Hyperspectral Image Super-Resolution}, 
+      author={Ritik Shah and Marco F. Duarte},
+      year={2025},
+      eprint={2507.13339},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2507.13339}, 
 }
 
 ## Terms of use:
