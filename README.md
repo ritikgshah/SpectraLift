@@ -119,6 +119,14 @@ To ensure full transparency and ease of experimentation:
 
 ---
 
+## 🛡️ Contribution Guidelines
+This is a public, read-only repository. If you'd like to suggest changes:
+- Please **fork** the repo
+- Make your edits
+- Submit a **pull request** for review
+
+Direct pushes are disabled. Thanks for respecting this workflow!
+
 ## 📖 Citation
 
 If you use this repository or build upon our work, please cite the following paper:
