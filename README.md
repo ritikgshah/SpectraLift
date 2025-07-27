@@ -1,63 +1,144 @@
 # SpectraLift: Physics-Guided Spectral-Inversion Network for Hyperspectral Image Super-Resolution
-Authors: Ritik Shah, Marco Duarte
 
-The extended version of the paper can be accessed at this link: https://arxiv.org/pdf/2507.13339
+**Authors:** Ritik Shah, Marco Duarte  
+📄 [Extended Paper on arXiv](https://arxiv.org/pdf/2507.13339)
 
-Welcome to the official implementation of SpectraLift. This repository accompanies our research paper and includes code, notebooks, data outputs, and environment files used for experimentation and analysis.
+---
 
-## Repository Contents:
-- CSV files with metrics
-  Contains subfolders for each synthetic hyperspectral image (HSI): Botswana, Kennedy Space Center, Pavia Center, Pavia University, and Washington DC Mall.
-  Each subfolder includes CSV files listing image quality metrics for multiple experimental settings—e.g., different PSFs, downsampling ratios for low-resolution HSI, and varying numbers of bands in high-resolution MSI.
-  Additionally, the folder includes an Excel file titled All SOTA methods comparison for all experiments, which aggregates all individual metrics and comparison tables. These results reflect all synthetic experiment data reported in our paper. This Excel file has a sheet named 'Individual metrics analysis' within which users can see the number of times each method achieves the best metric value for each dataset (towards the bottom of this sheet you can find the % times each method achieves the best metric), allowing users to compare in which cases each method does best and worst. 
-- Comparison Implementation
-  Contains two subfolders:  
-  • Supervised — Includes pre-executed Jupyter notebooks for FeINFN, FusFormer, GuidedNet, and MIMO-SST, applied to both synthetic datasets and University of Houston data.  
-  • Unsupervised — Includes pre-executed Jupyter notebooks for MIAE, C2FF, SSSR, and SDP, applied to both synthetic datasets and University of Houston data. 
-  
-  These implementations enable benchmarking against state-of-the-art supervised and unsupervised models.  
-- Conda Environment Replication Files
-  Includes environment setup resources to help users recreate the library environment:  
-requirements.txt — Use this to install dependencies via pip:
+## 🔍 Overview
 
+Welcome to the official implementation of **SpectraLift**. This repository accompanies our research paper and includes code, notebooks, datasets, precomputed results, and environment files for experimentation and analysis.
+
+---
+
+## 📚 Table of Contents
+
+- [Overview](#-overview)
+- [Repository Structure](#-repository-structure)
+- [Environment Setup](#-environment-setup)
+- [Datasets](#-datasets)
+- [Reproducibility](#-reproducibility)
+- [Citation](#-citation)
+- [License](#-license)
+
+---
+
+## 📁 Repository Structure
+
+### 🔸 CSV Files with Metrics
+
+- Organized into subfolders by synthetic HSI dataset:
+  - *Botswana*
+  - *Kennedy Space Center*
+  - *Pavia Center*
+  - *Pavia University*
+  - *Washington DC Mall*
+- Each subfolder contains:
+  - CSVs with image quality metrics across various experimental configurations (e.g., different PSFs, downsampling ratios, and MSI band counts).
+  - An Excel summary: `All SOTA methods comparison.xlsx` aggregates all individual method metrics and comparison tables
+    - Includes the sheet `'Individual metrics analysis'`, which:
+      - Shows how often each method achieves the best metric per dataset.
+      - Summarizes performance trends and strengths of different methods.
+
+---
+
+### 🔸 Comparison Implementations
+
+Benchmarks against state-of-the-art supervised and unsupervised baselines.
+
+- **Supervised**  
+  - Pre-executed Jupyter notebooks for: `FeINFN`, `FusFormer`, `GuidedNet`, `MIMO-SST`
+  - Applied to both synthetic datasets and the University of Houston dataset.
+
+- **Unsupervised**  
+  - Pre-executed Jupyter notebooks for: `MIAE`, `C2FF`, `SSSR`, `SDP`
+  - Applied to both synthetic datasets and the University of Houston dataset.
+
+---
+
+### 🔸 SpectraLift Implementation
+
+- **SpectraLift Implementation** (`Spectralift_Implementation_Jupyter_Notebooks`):  
+  Pre-executed notebooks demonstrating SpectraLift on both synthetic and University of Houston datasets.
+
+- **Ablation Study** (`Spectralift_Ablation_Study_Jupyter_Notebooks`):  
+  Pre-executed notebooks evaluating contributions of different model components and architectural choices.
+
+- **Python Scripts** (`SpectraLift_python`):  
+  Full Python-based implementation for use in IDEs or via command line.  
+  Detailed instructions available in [Python Implementation Details](py_implementation.md).
+
+- **Visualization Notebooks** (`Super_Resolved_Images_Comparison_Jupyter_Notebooks`):  
+  Pre-executed notebooks for visual comparison of high-resolution HSI outputs of all methods on each dataset. Includes:
+  - Spectral plots
+  - Image visualizations
+  > Note: Botswana output is split across two notebooks due to data size.
+
+---
+
+## ⚙️ Environment Setup
+
+Use either `pip` or `conda` to recreate the project environment:
+
+### Using pip:
 ```bash
 pip install -r requirements.txt
 ```
-spectralift-env.yaml — Use this to create the Conda environment:    
-
+### Using Conda:
 ```bash
-conda env create -f spectralift-env.yaml  
+conda env create -f spectralift-env.yaml
 conda activate spectralift-env
 ```
-Note: In rare cases, the YAML file may not rebuild the environment correctly. We recommend using requirements.txt if issues arise.
-- SpectraLift Ablation Study Jupyter Notebooks:
-  Contains pre-executed notebooks for evaluating the contribution of individual modules and architectural choices in the SpectraLift model.
-- SpectraLift Implementation Jupyter Notebooks:
-  Provides pre-executed notebooks showcasing the full implementation of SpectraLift on synthetic datasets and the University of Houston dataset.
-- SpectraLift_python:
-  Provides python scripts for running the SpectraLift framework in an IDE or from command line. Exact instructions for using the python scripts can be found in: [Python Implementation Details](py_implementation.md).
-- Super_Resolved_Images_Comparison_Jupyter_Notebooks:
-  Includes pre-executed notebooks for visualizing the high-resolution HSI outputs generated by SpectraLift and comparison methods.
-  Each notebook contains spectral plots and image comparisons. Due to extensive output, Botswana is split across two notebooks.
-- Datasets: Includes the .mat files for all the synthetic datasets used in our experiments: Washington DC Mall, Kennedy Space Center, Pavia University, Pavia Center, and Botswana. The full University of Houston dataset can be downloaded from their official website: https://machinelearning.ee.uh.edu/2018-ieee-grss-data-fusion-challenge-fusion-of-multispectral-lidar-and-hyperspectral-data/
+In rare cases, the Conda YAML file may fail to recreate the environment correctly. If so, use requirements.txt.
 
-## Reproducibility:
-To ensure reproducibility:
-- All notebooks are pre-executed so that researchers can directly view our results without needing to re-run experiments.
-- Environment files are provided to recreate the exact setup for running or modifying any notebook.
+## 🗂️ Datasets
 
-## Citation: if you use this code or build upon our work, please cite our paper:
+The repository includes `.mat` files for all synthetic hyperspectral image (HSI) datasets used in our experiments:
+
+- Washington DC Mall  
+- Kennedy Space Center  
+- Pavia University  
+- Pavia Center  
+- Botswana  
+
+### 📥 University of Houston Dataset
+
+The full University of Houston dataset can be downloaded from the official source:
+
+🔗 [2018 IEEE GRSS Data Fusion Challenge](https://machinelearning.ee.uh.edu/2018-ieee-grss-data-fusion-challenge-fusion-of-multispectral-lidar-and-hyperspectral-data/)
+
+---
+
+## ✅ Reproducibility
+
+To ensure full transparency and ease of experimentation:
+
+- All notebooks are **pre-executed**, so results can be viewed immediately without re-running code.
+- Environment files are provided to replicate the exact Python environment used in our experiments.
+- Python scripts are included along with detailed instructions to ensure that researchers can use our method with ease.
+
+---
+
+## 📖 Citation
+
+If you use this repository or build upon our work, please cite the following paper:
+
 ```bibtex
-@misc{shah2025spectraliftphysicsguidedspectralinversionnetwork,  
-  title={SpectraLift: Physics-Guided Spectral-Inversion Network for Self-Supervised Hyperspectral Image Super-Resolution},   
-  author={Ritik Shah and Marco F. Duarte},  
-  year={2025},  
-  eprint={2507.13339},  
-  archivePrefix={arXiv},  
-  primaryClass={eess.IV},  
-  url={https://arxiv.org/abs/2507.13339},   
+@misc{spectralift,
+  title={SpectraLift: Physics-Guided Spectral-Inversion Network for Self-Supervised Hyperspectral Image Super-Resolution},
+  author={Ritik Shah and Marco F. Duarte},
+  year={2025},
+  eprint={2507.13339},
+  archivePrefix={arXiv},
+  primaryClass={eess.IV},
+  url={https://arxiv.org/abs/2507.13339}
 }
 ```
 
-## Terms of use:
-This repository is open-sourced under the MIT License. You are free to use, modify, and distribute the code with proper attribution. Please refer to the MIT license on this repository to learn more about how you can use this code.
+## 📜 License
+
+This repository is licensed under the **MIT License**.
+
+You are free to use, modify, and distribute this code with proper attribution.
+
+For full details, see the [LICENSE](./LICENSE) file in the repository.
