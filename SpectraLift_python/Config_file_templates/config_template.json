@@ -1,0 +1,41 @@
+{
+    "synthetic": true,
+    "provide_psf": false,
+    "provide_srf": false,
+  
+    "mat_file": "path/to/your_hsi.mat",
+    "mat_key": "hsi_key",
+    "psf_type": "gaussian",
+    "sigma": 3.4,
+    "kernel_size": 7,
+    "num_msi_bands": 4,
+    "fwhm_factor": 4.2,
+    "downsample_ratio": 4,
+    "snr_spatial": 35.0,
+    "snr_spectral": 40.0,
+    "seed": 42,
+  
+    "psf_file": "path/to/your_psf.mat",
+    "srf_file": "path/to/your_srf.mat",
+  
+    "hr_msi_file": "path/to/hr_msi.mat",
+    "lr_hsi_file": "path/to/lr_hsi.mat",
+    "num_bands_msi_non_synthetic": 3,
+  
+    "verbose": 1,
+    "lr_schedule": "cosine_restart",
+    "init_lr": 0.0001,
+    "max_lr": 0.01,
+    "final_lr": 0.000001,
+    "min_lr": 0.000001,
+    "num_restarts": 2,
+    "epochs": 2500,
+    "hidden_size": 64,
+    "training_batch_size": null,
+    "inference_batch_size": null,
+    "output_file_type": "numpy",
+  
+    "output_dir": "outputs/example",
+    "log_dir": "logs/example"
+  }
+  

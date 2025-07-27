@@ -1,0 +1,80 @@
+# ========================================================
+#               SpectraLift Configuration File
+# ========================================================
+# This template can be used with main.py via:
+#   python main.py --config path/to/this_file.yaml
+# ========================================================
+
+
+# === Execution Mode ===
+synthetic: true                     # Set to true to generate synthetic LR HSI and HR MSI from a raw HSI
+                                   # Set to false if using real-world datasets
+
+provide_psf: false                 # Set to true if you want to load your own PSF from a .mat file
+provide_srf: false                 # Set to true if you want to load your own SRF from a .mat file
+                                   # REQUIRED if using real-world data and the HR input does not have 1, 3, 4, 8, or 16 bands
+
+
+# ========================================================
+# === For SYNTHETIC Generation (synthetic = true) ===
+# ========================================================
+mat_file: "path/to/your_hsi.mat"   # Path to the raw HSI .mat file from which synthetic data is generated
+mat_key: "hsi_key"                 # MATLAB key (variable name) for HSI within the .mat file (case-sensitive)
+
+psf_type: "gaussian"               # PSF kernel type (case-sensitive)
+                                   # Options: gaussian, kolmogorov, airy, moffat, sinc, lorentzian2, hermite, parabolic, gabor, delta
+
+sigma: 3.4                         # Sigma defines spread/blur scale for the PSF
+kernel_size: 7                     # PSF kernel size → shape is (2*kernel_size + 1, 2*kernel_size + 1)
+
+num_msi_bands: 4                   # Number of bands to simulate for HR MSI
+fwhm_factor: 4.2                   # FWHM→σ factor for SRF (if using Gaussian approximation)
+
+downsample_ratio: 4               # Spatial downsampling factor
+snr_spatial: 35.0                 # Spatial SNR (dB) for simulating LR HSI
+snr_spectral: 40.0                # Spectral SNR (dB) for simulating HR MSI
+seed: 42                          # Random seed for reproducibility
+
+psf_file: "path/to/your_psf.mat"   # Used only if provide_psf = true (can be .mat only). Must contain a single key
+srf_file: "path/to/your_srf.mat"   # Used only if provide_srf = true (can be .mat only). Must contain a single key
+
+
+# ========================================================
+# === For REAL-WORLD Inputs (synthetic = false) ===
+# ========================================================
+hr_msi_file: "path/to/hr_msi.mat"     # Path to HR MSI (can be .mat or .tif). Must contain a single variable/key.
+lr_hsi_file: "path/to/lr_hsi.mat"     # Path to LR HSI (can be .mat or .tif). Must contain a single variable/key.
+
+num_bands_msi_non_synthetic: 3        # If you want to auto-generate a Gaussian SRF for real data
+                                      # Options: 1, 3, 4, 8, or 16
+                                      # Set to null and use srf_file if your desired band count is different
+
+
+# ========================================================
+# === SpectraLift Training Parameters ===
+# ========================================================
+verbose: 1                            # 0: minimal console output, 1: input/output shapes and metrics shown
+
+lr_schedule: "cosine_restart"         # Learning rate schedule
+                                      # Options: one_cycle, cosine_restart, flat
+
+init_lr: 0.0001                       # Initial learning rate
+max_lr: 0.01                          # Max LR for one_cycle / cosine_restart
+final_lr: 0.000001                   # Final LR (for one_cycle only)
+min_lr: 0.000001                     # Min LR (for cosine_restart only)
+
+num_restarts: 2                      # Restarts in cosine schedule
+epochs: 2500                         # Number of training epochs
+hidden_size: 64                      # Neurons in each hidden layer of SIN
+
+training_batch_size: null            # Set to null to train on full image; else give patch size (e.g., 64 for 64x64)
+inference_batch_size: null           # Same logic for inference
+
+output_file_type: "numpy"            # Format to save result: numpy, h5, or matlab
+
+
+# ========================================================
+# === Output Management ===
+# ========================================================
+output_dir: "outputs/example"        # Folder to save the super-resolved HSI
+log_dir: "logs/example"              # Folder to save log file and used config snapshot
