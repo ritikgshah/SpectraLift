@@ -22,7 +22,7 @@ This document provides a comprehensive guide for using the Python scripts includ
 
 If you're working in an IDE like VS Code or PyCharm, use `run.py` for a hands-on, interactive workflow.
 
-### 🛠 User-Defined Parameters in `run.py`
+### User-Defined Parameters in `run.py`
 
 | Parameter | Description |
 |----------|-------------|
