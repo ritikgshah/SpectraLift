@@ -57,6 +57,7 @@ Benchmarks against state-of-the-art supervised and unsupervised baselines.
 ---
 
 ### 🔸 SpectraLift Implementation
+  > Note: The Spectral Inversion Network (SIN) mentioned in the paper is called SpectralSR_MLP in the code on this repository. 
 
 - **SpectraLift Implementation** (`Spectralift_Implementation_Jupyter_Notebooks`):  
   Pre-executed notebooks demonstrating SpectraLift on both synthetic and University of Houston datasets.
