@@ -81,6 +81,7 @@ Benchmarks against state-of-the-art supervised and unsupervised baselines.
 ## ⚙️ Environment Setup
 
 Use either `pip` or `conda` to recreate the project environment:
+> Note: This environment contains all the packages necessary to execute all the jupyter notebooks and python files in this repository, including the comparison methods.
 
 ### Using pip:
 ```bash
