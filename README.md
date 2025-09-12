@@ -92,7 +92,7 @@ pip install -r requirements.txt
 conda env create -f spectralift-env.yaml
 conda activate spectralift-env
 ```
-In rare cases, the Conda YAML file may fail to recreate the environment correctly. If so, use requirements.txt.
+In rare cases, the Conda YAML file may fail to recreate the environment correctly. If so, use requirements.txt. In the case where both the yaml as well as requirements.txt fail to create the environment using the commands given above, please follow the instructions in the [Manual Environment Setup Guide](ENVIRONMENT_SETUP.md) to be able to create a conda environment with every dependency you need to execute any file within this repository.
 
 ## 🗂️ Datasets
 
