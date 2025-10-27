@@ -13,7 +13,7 @@ This document provides a comprehensive guide for using the Python scripts includ
 | `spectralift_helpers.py` | Core training loop, inference routines, and MLP model architecture. |
 | `generate_synthetic_inputs.py` | Creates synthetic low-resolution HSI and high-resolution MSI inputs using custom or predefined PSFs and SRFs. |
 | `utils.py`            | Utility functions for spectral/spatial degradation, PSF/SRF models, normalization, and noise injection. |
-| `compute_metrics.py`  | (Not shown above, assumed present) Computes evaluation metrics for quantitative benchmarking. |
+| `compute_metrics.py`  | Computes evaluation metrics for quantitative benchmarking. |
 | `__init__.py`         | Makes SpectraLift usable as a Python package by exposing key functions for import. |
 
 ---
