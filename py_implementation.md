@@ -178,7 +178,7 @@ You can control the format using the `output_file_type` parameter (`'numpy'`, `'
 
 If you have any questions or run into issues:
 
-- Review the [README](../README.md)
+- Review the [README](README.md)
 - Check our pre executed jupyter notebooks that implement the method
 - Open an issue on the GitHub repository
 - Refer to our [paper on arXiv](https://arxiv.org/abs/2507.13339)
