@@ -149,7 +149,7 @@ The following learning rate schedulers are supported:
 
 To see the **exact learning rate schedules and hyperparameters** used in each of the experiments reported in our paper, please refer to:
 
-[`Spectralift_Implementation_Jupyter_Notebooks/`](../../Spectralift_Implementation_Jupyter_Notebooks)
+[`Spectralift_Implementation_Jupyter_Notebooks`](Spectralift_Implementation_Jupyter_Notebooks)
 
 These notebooks contain:
 
