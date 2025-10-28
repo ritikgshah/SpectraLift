@@ -149,7 +149,7 @@ The following learning rate schedulers are supported:
 
 To see the **exact learning rate schedules and hyperparameters** used in each of the experiments reported in our paper, please refer to:
 
-[`Spectralift_Implementation_Jupyter_Notebooks/`](../Spectralift_Implementation_Jupyter_Notebooks)
+[`Spectralift_Implementation_Jupyter_Notebooks/`](../../Spectralift_Implementation_Jupyter_Notebooks)
 
 These notebooks contain:
 
@@ -179,6 +179,7 @@ You can control the format using the `output_file_type` parameter (`'numpy'`, `'
 If you have any questions or run into issues:
 
 - Review the [README](../README.md)
+- Check our pre executed jupyter notebooks that implement the method
 - Open an issue on the GitHub repository
 - Refer to our [paper on arXiv](https://arxiv.org/abs/2507.13339)
 - Email the authors if neither of the above options work for you
