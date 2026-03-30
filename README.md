@@ -1,6 +1,6 @@
 # SpectraLift: Physics-Guided Spectral-Inversion Network for Hyperspectral Image Super-Resolution
 
-**Authors:** Ritik Shah ([rgshah@umass.edu](mailto:rgshah@umass.edu)), Marco Duarte ([mduarte@ecs.umass.edu](mailto:mduarte@ecs.umass.edu))  
+**Authors:** Ritik Shah ([ritik.shah@aritheon.com](mailto:ritik.shah@aritheon.com)), Marco Duarte ([mduarte@ecs.umass.edu](mailto:mduarte@ecs.umass.edu))  
 Published at IEEE Workshop on Hyperspectral Imaging and Signal Processing: Evolution in Remote Sensing (WHISPERS) 2025.
 
 📄 [Extended version on arXiv](https://arxiv.org/pdf/2507.13339)
