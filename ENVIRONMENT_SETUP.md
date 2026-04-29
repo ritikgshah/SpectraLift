@@ -25,7 +25,7 @@ python -m pip install "tensorflow[and-cuda]==2.17.0"
 Install PyTorch and related libraries with CUDA 11.8 support using the official PyTorch index:
 
 ```bash
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install torch --index-url https://download.pytorch.org/whl/cu118
 ```
 ## 4. Install Additional Python Dependencies
 
