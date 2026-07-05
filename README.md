@@ -97,7 +97,7 @@ In rare cases, the Conda YAML file may fail to recreate the environment correctl
 
 ## 🗂️ Datasets
 
-The repository includes `.mat` files for all synthetic hyperspectral image (HSI) datasets used in our experiments:
+SpectraLift uses the following datasets for all synthetic experiments which are easily available publically:
 
 - Washington DC Mall  
 - Kennedy Space Center  
